@@ -14,7 +14,7 @@ Run `ng build maple` to build the project. The build artifacts will be stored in
 
 ## Publishing
 
-After building your library with `ng build maple`, go to the dist folder `cd dist/maple` and run `npm publish`.
+After building your library with `ng build maple`, go to the dist folder `cd dist/core` and run `npm publish`.
 
 ## Running unit tests
 
