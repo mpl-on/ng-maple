@@ -1,5 +1,5 @@
 {
-  "name": "maple",
+  "name": "ng-maple",
   "description": "",
   "version": "0.2.4",
   "scripts": {
@@ -15,7 +15,8 @@
   "keywords": [
     "sass",
     "scss",
-    "maple"
+    "maple",
+    "ng-maple"
   ],
   "repository": {
     "type": "git",

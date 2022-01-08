@@ -1,5 +1,5 @@
 /*
- * Public API Surface of maple
+ * Public APIs
  */
 
 export * from './property-extension-map';

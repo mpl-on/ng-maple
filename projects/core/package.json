@@ -1,5 +1,5 @@
 {
-  "name": "maple",
+  "name": "ng-maple",
   "version": "0.2.4",
   "peerDependencies": {
     "@angular/common": "^11.0.6",
