@@ -1,68 +1,30 @@
 {
   "name": "ng-maple",
-  "description": "",
   "version": "1.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "release": "sh make-release.sh"
-  },
-  "private": true,
-  "homepage": "https://github.com/mpl-on/ng-maple",
-  "keywords": [
-    "sass",
-    "scss",
-    "maple",
-    "ng-maple"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mpl-on/ng-maple.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mpl-on/ng-maple/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/mpl-on/ng-maple/blob/master/LICENSE"
-    }
-  ],
   "dependencies": {
-    "@angular/animations": "~13.1.1",
-    "@angular/common": "~13.1.1",
-    "@angular/compiler": "~13.1.1",
-    "@angular/core": "~13.1.1",
-    "@angular/forms": "~13.1.1",
-    "@angular/router": "~13.1.1",
-    "@angular/platform-browser": "~13.1.1",
-    "@angular/platform-browser-dynamic": "~13.1.1",
-    "@angular/platform-server": "~13.1.1",
-    "rxjs": "~7.4.0",
-    "tslib": "^2.3.1",
-    "zone.js": "~0.11.4"
+    "tslib": "^2.3.1"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^13.0.3",
-    "@angular/cli": "~13.1.2",
-    "@angular/compiler-cli": "~13.1.1",
-    "@types/jasmine": "~3.6.0",
-    "@types/node": "^8.10.64",
-    "codelyzer": "^6.0.2",
-    "jasmine-core": "~3.8.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~6.3.9",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "ng-packagr": "^13.1.2",
-    "protractor": "~7.0.0",
-    "ts-node": "~10.4.0",
-    "tslint": "~6.1.3",
-    "typescript": "~4.5.4"
+  "module": "fesm2015/ng-maple.mjs",
+  "es2020": "fesm2020/ng-maple.mjs",
+  "esm2020": "esm2020/ng-maple.mjs",
+  "fesm2020": "fesm2020/ng-maple.mjs",
+  "fesm2015": "fesm2015/ng-maple.mjs",
+  "typings": "ng-maple.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./ng-maple.d.ts",
+      "esm2020": "./esm2020/ng-maple.mjs",
+      "es2020": "./fesm2020/ng-maple.mjs",
+      "es2015": "./fesm2015/ng-maple.mjs",
+      "node": "./fesm2015/ng-maple.mjs",
+      "default": "./fesm2020/ng-maple.mjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
   }
 }
