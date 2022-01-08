@@ -28,7 +28,7 @@ mkdir TO_DELETE
 shopt -s dotglob extglob
 mv !(.git) TO_DELETE
 shopt -u dotglob extglob
-mv TO_DELETE/dist/core/** .
+mv TO_DELETE/projects/dist/core/** .
 rm -rf TO_DELETE
 
 # Commit dist files
