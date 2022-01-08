@@ -11,7 +11,7 @@
     "release": "sh make-release.sh"
   },
   "private": true,
-  "homepage": "https://github.com/onuradsay/maple",
+  "homepage": "https://github.com/mpl-on/ng-maple",
   "keywords": [
     "sass",
     "scss",
@@ -19,15 +19,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/onuradsay/maple.git"
+    "url": "https://github.com/mpl-on/ng-maple.git"
   },
   "bugs": {
-    "url": "https://github.com/onuradsay/maple/issues"
+    "url": "https://github.com/mpl-on/ng-maple/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/onuradsay/maple/blob/master/LICENSE"
+      "url": "https://github.com/mpl-on/ng-maple/blob/master/LICENSE"
     }
   ],
   "dependencies": {
