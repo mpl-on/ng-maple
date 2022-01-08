@@ -11,9 +11,9 @@ git checkout -b lastest-release
 
 # Ensure we have the latest version of things
 rm -rf node_modules # package-lock.json <-- may want to remove this file too if it suits your project.
-npm install 
+npm install
 
-# Test validity 
+# Test validity
 # npm test
 
 # Build and update docs
@@ -23,12 +23,12 @@ ng build
 releaseVersion=`node -e "let package = require('./package.json'); console.log(package.version)"`
 releaseVersion="v$releaseVersion" # of the form vX.X.X
 
-# Remove all files except for the ones inside dist/maple
+# Remove all files except for the ones inside dist/core
 mkdir TO_DELETE
 shopt -s dotglob extglob
 mv !(.git) TO_DELETE
 shopt -u dotglob extglob
-mv TO_DELETE/dist/maple/** .
+mv TO_DELETE/dist/core/** .
 rm -rf TO_DELETE
 
 # Commit dist files
