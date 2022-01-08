@@ -1,0 +1,34 @@
+{
+  "name": "maple",
+  "version": "0.2.4",
+  "peerDependencies": {
+    "@angular/common": "^11.0.6",
+    "@angular/core": "^11.0.6"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "module": "fesm2015/maple.mjs",
+  "es2020": "fesm2020/maple.mjs",
+  "esm2020": "esm2020/maple.mjs",
+  "fesm2020": "fesm2020/maple.mjs",
+  "fesm2015": "fesm2015/maple.mjs",
+  "typings": "maple.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./maple.d.ts",
+      "esm2020": "./esm2020/maple.mjs",
+      "es2020": "./fesm2020/maple.mjs",
+      "es2015": "./fesm2015/maple.mjs",
+      "node": "./fesm2015/maple.mjs",
+      "default": "./fesm2020/maple.mjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
+  }
+}

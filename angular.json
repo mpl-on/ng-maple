@@ -3,34 +3,34 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "maple": {
+    "core": {
       "projectType": "library",
-      "root": "maple",
-      "sourceRoot": "maple/src",
-      "prefix": "maple",
+      "root": "core",
+      "sourceRoot": "projects/core/src",
+      "prefix": "core",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "maple/tsconfig.lib.json",
-            "project": "maple/ng-package.json"
+            "tsConfig": "projects/core/tsconfig.lib.json",
+            "project": "projects/core/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "maple/tsconfig.lib.prod.json"
+              "tsConfig": "projects/core/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "maple/src/test.ts",
-            "tsConfig": "maple/tsconfig.spec.json",
-            "karmaConfig": "maple/karma.conf.js"
+            "main": "projects/core/src/test.ts",
+            "tsConfig": "projects/core/tsconfig.spec.json",
+            "karmaConfig": "projects/core/karma.conf.js"
           }
         }
       }
     }
   },
-  "defaultProject": "f12-content"
+  "defaultProject": "core"
 }
