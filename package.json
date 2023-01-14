@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
+    "watch": "ng watch",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
