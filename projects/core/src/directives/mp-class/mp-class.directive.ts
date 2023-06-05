@@ -17,10 +17,9 @@ import {
   KeyValueDiffer,
   KeyValueDiffers,
   Renderer2,
-  ɵisListLikeIterable as isListLikeIterable,
   ɵstringify as stringify,
 } from '@angular/core';
-import { Maple } from '../..';
+import { Maple } from '../../main';
 
 type NgClassSupportedTypes =
   | Array<string>
@@ -95,7 +94,7 @@ export class MpClass implements DoCheck {
     this._rawClass = typeof value === 'string' ? value.split(/\s+/) : value;
 
     if (this._rawClass) {
-      if (isListLikeIterable(this._rawClass)) {
+      if (this.isListLikeIterable(this._rawClass)) {
         this._iterableDiffer = this._iterableDiffers
           .find(this._rawClass)
           .create();
@@ -155,6 +154,19 @@ export class MpClass implements DoCheck {
     changes.forEachRemovedItem((record) =>
       this._toggleClass(record.item, false),
     );
+  }
+
+  private isJsObject(o) {
+    return o !== null && (typeof o === 'function' || typeof o === 'object');
+  }
+
+  private isListLikeIterable(obj) {
+    if (!this.isJsObject(obj)) return false;
+    return (
+      Array.isArray(obj) ||
+      (!(obj instanceof Map) && // JS Map are iterables but return entries as [k, v]
+        Symbol.iterator in obj)
+    ); // JS Iterable have a Symbol.iterator prop
   }
 
   /**
